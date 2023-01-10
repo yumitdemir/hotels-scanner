@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: ffffff;
+  color: #00a698;
+  font-weight: 800;
+  border-bottom: black solid 2px;
+}
+
+.navOptionList {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  text-decoration: none;
+  background-color: #00a698;
+  color: black;
+  padding: 1rem;
+}
+
+.navOptionList li:hover {
+  border-bottom: 2px solid orange;
+  cursor: pointer;
+}

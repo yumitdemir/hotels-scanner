@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import shortid from "shortid";
 import styles from "./styles.module.css";
 
-function HotelListItems({ setHotelList, hotelList }) {
+function HotelListItems({ setHotelList, hotelList, checkOut, checkIn }) {
   return (
     <div className={styles.girdContainer}>
       <div className={styles.leftMenu}>

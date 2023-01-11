@@ -43,7 +43,12 @@ function HotelList(props) {
           <p>Loading</p>
         </div>
       ) : (
-        <HotelListItems hotelList={hotelList} setHotelList={setHotelList} />
+        <HotelListItems
+          hotelList={hotelList}
+          setHotelList={setHotelList}
+          checkOut={checkOut}
+          checkIn={checkIn}
+        />
       )}
     </div>
   );

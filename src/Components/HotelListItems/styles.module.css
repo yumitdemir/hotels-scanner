@@ -1,0 +1,146 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.leftMenu ul {
+  background-color: #79a52f;
+}
+
+.girdContainer {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 0px;
+  background-color: #ffffff;
+}
+
+.hotelListHeader {
+  margin-bottom: 25px;
+  padding: 1.5vw;
+  padding-right: 3vw;
+}
+
+.hotelListContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.hotelItem {
+  box-sizing: border-box;
+  padding: 1.5vw;
+  padding-right: 3vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.51fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "cardHeader cardHeader cardHeader cardHeader cardHeader"
+    "hotelImg hotelImg details details details"
+    "hotelImg hotelImg details details details";
+}
+.hotelItem:hover {
+  background-color: rgba(109, 109, 109, 0.167);
+}
+.cardHeader h1:hover {
+  color: rgb(78, 78, 78);
+  cursor: pointer;
+}
+.cardHeader {
+  grid-area: cardHeader;
+}
+.hotelImg {
+  grid-area: hotelImg;
+}
+.details {
+  grid-area: details;
+}
+
+.headerTitleStar {
+  display: flex;
+}
+
+.headerTitleStar h1 {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.hotelImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hotelImg img {
+  width: 90%;
+  height: 90%;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details div ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+.leftDetails ul,
+.rightDetails ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}
+
+.headerTitleStar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftDetails ul li img {
+  width: 80%;
+}
+.leftDetails ul li img:hover {
+  width: 100%;
+  cursor: pointer;
+}
+.hotelImg:hover {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.headerTitleStar p {
+  white-space: nowrap;
+}
+.leadPrice:first-of-type {
+  color: #ffcd1e;
+  font-weight: 600;
+  font-size: 1.5vw;
+}
+
+.leadPrice {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9vw;
+  text-align: right;
+}
+.viewDealBtn {
+  background-color: #ffcd1e;
+  font-size: 0.9vw;
+  box-shadow: none;
+  border: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.6rem;
+}
+.viewDealBtn:hover {
+  background-color: #b68f04a9;
+  cursor: pointer;
+}

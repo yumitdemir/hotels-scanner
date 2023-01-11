@@ -7,7 +7,7 @@ const Nav = () => {
       <p className={styles.logo}>Hotel Scanner</p>
       <div className={styles.navOptionListContainer}>
         <ul className={styles.navOptionList}>
-          <li>Hotels</li>
+          <li className={styles.hotelOption}>Hotels</li>
           <li>Rent a Car</li>
           <li>Flights</li>
         </ul>

@@ -2,19 +2,20 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
+import HotelListItems from "../../Components/HotelListItems/HotelListItems";
+import styles from "./styles.module.css";
 function HotelList(props) {
-  const [hotelList, setHotelList] = useState([]);
   const { id, checkIn, checkOut } = useParams();
-
+  const [hotelList, setHotelList] = useState([]);
   function hotelSearch(regionId, checkInDate, checkOutDate) {
     const options = {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "229d3c35c0msh526d5f352de1744p1469b4jsndeeb62345982",
+        "X-RapidAPI-Key": "b411493026msh5ba1eeb0ec7d94dp15766ajsn5dbed6e94642",
         "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
       },
-      body: `{"currency":"USD","eapid":1,"locale":"en_US","siteId":300000001,"destination":{"regionId":"6054439"},"checkInDate":{"day":${Number(
+      body: `{"currency":"USD","eapid":1,"locale":"en_US","siteId":300000001,"destination":{"regionId":"${regionId}"},"checkInDate":{"day":${Number(
         checkInDate[2]
       )},"month":${Number(checkInDate[1])},"year":${Number(
         checkInDate[0]
@@ -27,19 +28,23 @@ function HotelList(props) {
 
     fetch("https://hotels4.p.rapidapi.com/properties/v2/list", options)
       .then((response) => response.json())
-      .then((response) => console.log(response))
+      .then((response) => setHotelList(response.data.propertySearch.properties))
       .catch((err) => console.error(err));
   }
-  console.log(id, checkIn.split("-"), checkOut.split("-"));
+
   useEffect(() => {
-    console.log(checkIn.split("-"), checkOut.split("-"));
+    console.log(id);
     hotelSearch(id, checkIn.split("-"), checkOut.split("-"));
   }, []);
-
-  console.log(hotelList);
   return (
-    <div>
-      Can get the hotel list data from the api need to finish search city future
+    <div className={styles.HotelList}>
+      {hotelList.length === 0 ? (
+        <div className={styles.loading}>
+          <p>Loading</p>
+        </div>
+      ) : (
+        <HotelListItems hotelList={hotelList} setHotelList={setHotelList} />
+      )}
     </div>
   );
 }

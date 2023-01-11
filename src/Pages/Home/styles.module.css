@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+.Home {
+  margin-top: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.homeDescription {
+  text-align: center;
+  margin-bottom: 3vw;
+  box-sizing: border-box;
+  padding-right: 17vw;
+  padding-left: 17vw;
+  color: white;
+  font-weight: 700;
+}
+.homeDescription h1 {
+  margin: 0;
+  font-size: 3vw;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.homeDescription p {
+  font-size: 1vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 798px) {
+  .homeDescription {
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+
+  .homeDescription h1 {
+    font-size: 6vw;
+  }
+  .homeDescription p {
+    font-size: 3vw;
+  }
+  .Home {
+    align-items: flex-end;
+  }
+}

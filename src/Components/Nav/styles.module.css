@@ -1,4 +1,5 @@
 .nav {
+  position: relative;
   display: flex;
   width: 100%;
   align-items: center;
@@ -6,10 +7,13 @@
   box-sizing: border-box;
   padding-left: 10%;
   padding-right: 10%;
-  background-color: ffffff;
-  color: #00a698;
+  color: white;
   font-weight: 800;
-  border-bottom: black solid 2px;
+  background-color: #5c8f10;
+}
+.hotelOption {
+  margin: -1px;
+  border-bottom: 2px solid orange;
 }
 
 .navOptionList {
@@ -17,12 +21,11 @@
   gap: 15px;
   list-style: none;
   text-decoration: none;
-  background-color: #00a698;
-  color: black;
-  padding: 1rem;
+  color: white;
 }
 
 .navOptionList li:hover {
+  margin: -1px;
   border-bottom: 2px solid orange;
   cursor: pointer;
 }

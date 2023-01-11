@@ -1,0 +1,12 @@
+.hotelList {
+  background-color: #f7f7f7;
+}
+.loading {
+  position: absolute;
+  font-size: 5vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0);
+  margin: auto;
+}

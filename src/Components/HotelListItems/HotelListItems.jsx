@@ -6,15 +6,7 @@ import styles from "./styles.module.css";
 
 import AutoItemLoder from "../AutoItemLoader/AutoItemLoder";
 
-function HotelListItems({
-  visibleItem,
-  setVisibleItem,
-  setHotelList,
-  hotelList,
-  checkOut,
-  checkIn,
-}) {
-  console.log(hotelList, "HotelListItems --------------");
+function HotelListItems({ setHotelList, hotelList, checkOut, checkIn }) {
   return (
     <div className={styles.girdContainer}>
       <div className={styles.leftMenu}>
@@ -40,11 +32,7 @@ function HotelListItems({
           </p>
         </div>
         <div className={styles.hotelListContainer}>
-          <AutoItemLoder
-            visibleItem={visibleItem}
-            setVisibleItem={setVisibleItem}
-            hotelList={hotelList}
-          />
+          <AutoItemLoder hotelList={hotelList} />
         </div>
       </div>
     </div>

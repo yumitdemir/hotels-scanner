@@ -2,11 +2,12 @@ import React, { useMemo, useState } from "react";
 import styles from "./styles.module.css";
 import shortid from "shortid";
 
-function AutoItemLoder({ hotelList, setVisibleItem, visibleItem }) {
+function AutoItemLoder({ hotelList }) {
+  const [visibleItem, setVisibleItem] = useState(10);
   const loadMore = () => {
     setVisibleItem(visibleItem + 10);
   };
-  console.log(visibleItem, hotelList.length, "auto---------------");
+
   return (
     <>
       {hotelList.slice(0, visibleItem).map((item) => {

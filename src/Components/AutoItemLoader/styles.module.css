@@ -172,5 +172,14 @@ p {
 }
 
 .loadMore {
-  margin-bottom: 150px;
+  padding: 1.2vw;
+  background-color: #ffcd1e;
+  border: none;
+  box-shadow: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.loadMore:hover {
+  background-color: #b48f07b1;
+  cursor: pointer;
 }

@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import HotelListItems from "../../Components/HotelListItems/HotelListItems";
 import styles from "./styles.module.css";
 function HotelList(props) {
+  const [visibleItem, setVisibleItem] = useState(10);
   const { id, checkIn, checkOut } = useParams();
   const [hotelList, setHotelList] = useState([]);
   function hotelSearch(regionId, checkInDate, checkOutDate) {
@@ -44,6 +45,8 @@ function HotelList(props) {
         </div>
       ) : (
         <HotelListItems
+          setVisibleItem={setVisibleItem}
+          visibleItem={visibleItem}
           hotelList={hotelList}
           setHotelList={setHotelList}
           checkOut={checkOut}

@@ -170,3 +170,7 @@ p {
   background-color: #b68f04a9;
   cursor: pointer;
 }
+
+.loadMore {
+  margin-bottom: 150px;
+}

@@ -1,30 +1,21 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import LeftMenu from "../../leftMenu/LeftMenu";
 
 import styles from "./styles.module.css";
 
 import AutoItemLoder from "../AutoItemLoader/AutoItemLoder";
 
-function HotelListItems({ setHotelList, hotelList, checkOut, checkIn }) {
+function HotelListItems({ cityname, hotelList, checkOut, checkIn }) {
   return (
     <div className={styles.girdContainer}>
       <div className={styles.leftMenu}>
-        <ul>
-          <li>s</li>
-          <li>s</li>
-          <li>d</li>
-          <li>s</li>
-          <li>s</li>
-          <li>d</li>
-          <li>s</li>
-          <li>s</li>
-          <li>d</li>
-        </ul>
+        <LeftMenu cityname={cityname} checkOut={checkOut} checkIn={checkIn} />
       </div>
       <div className={styles.hotelList}>
         <div className={styles.hotelListHeader}>
-          <p>NEW YORK , {hotelList.length - 20} properties</p>
+          <p>
+            {cityname.toUpperCase()} , {hotelList.length} properties
+          </p>
           <p>
             {checkOut.split("-")[2] - checkIn.split("-")[2]} night(
             {checkIn.split("-")[2]}-{checkIn.split("-")[1]}/{" "}
@@ -39,4 +30,4 @@ function HotelListItems({ setHotelList, hotelList, checkOut, checkIn }) {
   );
 }
 
-export default React.memo(HotelListItems);
+export default HotelListItems;

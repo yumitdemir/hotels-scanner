@@ -183,3 +183,12 @@ p {
   background-color: #b48f07b1;
   cursor: pointer;
 }
+
+.rightDetails ul li {
+  text-align: end;
+}
+
+.discountPrice {
+  color: rgb(193, 193, 193);
+  text-decoration-line: line-through;
+}

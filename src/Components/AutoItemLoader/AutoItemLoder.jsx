@@ -1,12 +1,14 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import styles from "./styles.module.css";
 import shortid from "shortid";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 function AutoItemLoder({ hotelList }) {
   const [visibleItem, setVisibleItem] = useState(10);
   const loadMore = () => {
     setVisibleItem(visibleItem + 10);
   };
+  useEffect(() => {}, [hotelList]);
 
   return (
     <>
@@ -60,13 +62,26 @@ function AutoItemLoder({ hotelList }) {
                       <p className={styles.leadPrice}>
                         {item.price.lead?.formatted} <br />
                       </p>
+                      <p className={styles.discountPrice}>
+                        {item.price.lead?.formatted <
+                          item.price.displayMessages[0].lineItems[0].price
+                            .formatted &&
+                          item.price.displayMessages[0].lineItems[0].price
+                            .formatted}
+                      </p>
                       <p className={styles.leadPrice}>Per night</p>
                       <button className={styles.viewDealBtn}>View Deal</button>
                     </div>
                   </li>
-                  <li>jijijn</li>
-                  <li>jjnkjnk</li>
-                  <li>jnjjkn</li>
+                  <li>
+                    jijijn <MdKeyboardArrowRight />
+                  </li>
+                  <li>
+                    jjnkjnk <MdKeyboardArrowRight />
+                  </li>
+                  <li>
+                    jnjjkn <MdKeyboardArrowRight />
+                  </li>
                 </ul>
               </div>
             </div>
@@ -82,4 +97,4 @@ function AutoItemLoder({ hotelList }) {
   );
 }
 
-export default React.memo(AutoItemLoder);
+export default AutoItemLoder;

@@ -12,7 +12,10 @@ function App() {
       <div className={styles.content}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:id/:checkIn/:checkOut" element={<HotelList />} />
+          <Route
+            path=":cityname/:id/:checkIn/:checkOut"
+            element={<HotelList />}
+          />
         </Routes>
       </div>
     </div>

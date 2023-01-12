@@ -1,0 +1,22 @@
+.leftMenuList li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.leftMenuList li input {
+  font-size: 1.5vw;
+  margin-bottom: 0.5vw;
+}
+.citysuggestion {
+  position: relative;
+
+  background-color: white;
+}
+.citysuggestion p {
+  margin-bottom: 3px;
+}
+.citysuggestion p:hover {
+  background-color: rgba(147, 147, 147, 0.568);
+  cursor: pointer;
+}

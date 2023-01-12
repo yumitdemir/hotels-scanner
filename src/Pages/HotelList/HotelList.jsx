@@ -5,14 +5,15 @@ import { useParams } from "react-router-dom";
 import HotelListItems from "../../Components/HotelListItems/HotelListItems";
 import styles from "./styles.module.css";
 function HotelList(props) {
-  const { id, checkIn, checkOut } = useParams();
+  const { cityname, id, checkIn, checkOut } = useParams();
   const [hotelList, setHotelList] = useState([]);
+  console.log(hotelList);
   function hotelSearch(regionId, checkInDate, checkOutDate) {
     const options = {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "b411493026msh5ba1eeb0ec7d94dp15766ajsn5dbed6e94642",
+        "X-RapidAPI-Key": "d550254368mshc31e544bf5340d6p12c15bjsn425b418039ce",
         "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
       },
       body: `{"currency":"USD","eapid":1,"locale":"en_US","siteId":300000001,"destination":{"regionId":"${regionId}"},"checkInDate":{"day":${Number(
@@ -43,6 +44,7 @@ function HotelList(props) {
         </div>
       ) : (
         <HotelListItems
+          cityname={cityname}
           hotelList={hotelList}
           setHotelList={setHotelList}
           checkOut={checkOut}

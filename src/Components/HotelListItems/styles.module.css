@@ -4,14 +4,15 @@ p {
 }
 
 .leftMenu ul {
-  background-color: #79a52f;
+  padding: 15px;
+  background-color: #669900;
 }
 
 .girdContainer {
   padding-left: 10vw;
   padding-right: 10vw;
   display: grid;
-  grid-template-columns: 0.25fr 1fr;
+  grid-template-columns: 0.05fr 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 0px;
   background-color: #ffffff;
@@ -169,4 +170,27 @@ p {
 .viewDealBtn:hover {
   background-color: #b68f04a9;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 945px) {
+  .girdContainer {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 0px;
+    background-color: #ffffff;
+  }
+}
+
+@media only screen and (max-width: 623px) {
+  .girdContainer {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+
+ul {
+  list-style-type: none;
 }

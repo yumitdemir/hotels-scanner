@@ -1,8 +1,13 @@
 import React from "react";
 import styles from "./styles.module.css";
 import Search from "../../Components/Search/Search";
+import { useState } from "react";
 
 function Home(props) {
+  const [location, setLocation] = useState("");
+  const [inDate, setInDate] = useState("");
+  const [outDate, setOutDate] = useState("");
+  const [locationId, setLocationId] = useState();
   return (
     <div className={styles.Home}>
       <div className={styles.homeDescription}>
@@ -14,7 +19,16 @@ function Home(props) {
           dolor nesciunt sit iusto omnis ad a
         </p>
       </div>
-      <Search />
+      <Search
+        location={location}
+        setLocation={setLocation}
+        inDate={inDate}
+        setInDate={setInDate}
+        outDate={outDate}
+        setOutDate={setOutDate}
+        locationId={locationId}
+        setLocationId={setLocationId}
+      />
     </div>
   );
 }

@@ -6,15 +6,19 @@ import { Link } from "react-router-dom";
 
 import styles from "./styles.module.css";
 
-function Search(props) {
+function Search({
+  location,
+  setLocation,
+  inDate,
+  setInDate,
+  outDate,
+  setOutDate,
+  locationId,
+  setLocationId,
+}) {
   const [locationRecList, setLocationRecList] = useState([]);
-  const [location, setLocation] = useState("");
-  const [inDate, setInDate] = useState("");
-  const [outDate, setOutDate] = useState("");
   const [apiStatus, setApiStatus] = useState(true);
-  const [locationId, setLocationId] = useState();
 
-  function LocationRecommendation(location) {}
   useEffect(
     apiStatus
       ? () => {
@@ -30,7 +34,7 @@ function Search(props) {
             },
             headers: {
               "X-RapidAPI-Key":
-                "b411493026msh5ba1eeb0ec7d94dp15766ajsn5dbed6e94642",
+                "d550254368mshc31e544bf5340d6p12c15bjsn425b418039ce",
               "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
             },
             signal: controller.signal,
@@ -82,7 +86,7 @@ function Search(props) {
           }}
         />
         {(apiStatus === false) & (inDate !== "") & (outDate !== "") ? (
-          <Link to={`/${locationId}/${inDate}/${outDate}`}>
+          <Link to={`${location}/${locationId}/${inDate}/${outDate}`}>
             <button className={styles.submitButton} onClick={() => {}}>
               Search
             </button>

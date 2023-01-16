@@ -194,3 +194,8 @@ p {
 ul {
   list-style-type: none;
 }
+
+.infoAndSort {
+  display: flex;
+  justify-content: space-between;
+}

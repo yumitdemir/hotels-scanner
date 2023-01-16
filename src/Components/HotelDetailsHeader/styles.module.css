@@ -1,0 +1,7 @@
+.nameAndStar {
+  display: flex;
+  align-items: center;
+}
+.header {
+  margin-bottom: 20px;
+}

@@ -147,13 +147,13 @@ p {
 .leadPrice:first-of-type {
   color: #ffcd1e;
   font-weight: 600;
-  font-size: 1.5vw;
+  font-size: 2.5vw;
 }
 
 .leadPrice {
   margin: 0;
   padding: 0;
-  font-size: 0.9vw;
+  font-size: 1.2vw;
   text-align: right;
 }
 .viewDealBtn {
@@ -191,4 +191,8 @@ p {
 .discountPrice {
   color: rgb(193, 193, 193);
   text-decoration-line: line-through;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
 }

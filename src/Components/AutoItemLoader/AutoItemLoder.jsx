@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import styles from "./styles.module.css";
 import shortid from "shortid";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { CiBadgeDollar, CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 function AutoItemLoder({ hotelList }) {
   const [visibleItem, setVisibleItem] = useState(10);
@@ -18,7 +20,12 @@ function AutoItemLoder({ hotelList }) {
             <div className={styles.cardHeader}>
               <div>
                 <div className={styles.headerTitleStar}>
-                  <h1>{item.name}</h1>
+                  <Link
+                    to={`${item.id}/${item.mapMarker.latLong.latitude}/${item.mapMarker.latLong.longitude}`}
+                  >
+                    <h1>{item.name}</h1>
+                  </Link>
+
                   <p className={styles.userScore}>
                     User score {item.reviews.score}
                     <br></br>
@@ -26,7 +33,12 @@ function AutoItemLoder({ hotelList }) {
                   </p>
                 </div>
               </div>
-              <p>{item.destinationInfo.distanceFromMessaging}</p>
+              <p>
+                <CiBadgeDollar /> Collect stamps{" "}
+              </p>
+              <p>
+                <CiLocationOn /> {item.destinationInfo.distanceFromMessaging}
+              </p>
             </div>
             <div className={styles.hotelImg}>
               <img
@@ -56,33 +68,24 @@ function AutoItemLoder({ hotelList }) {
                 </ul>
               </div>
               <div className={styles.rightDetails}>
-                <ul>
-                  <li>
-                    <div>
-                      <p className={styles.leadPrice}>
-                        {item.price.lead?.formatted} <br />
-                      </p>
-                      <p className={styles.discountPrice}>
-                        {item.price.lead?.formatted <
-                          item.price.displayMessages[0].lineItems[0].price
-                            .formatted &&
-                          item.price.displayMessages[0].lineItems[0].price
-                            .formatted}
-                      </p>
-                      <p className={styles.leadPrice}>Per night</p>
-                      <button className={styles.viewDealBtn}>View Deal</button>
-                    </div>
-                  </li>
-                  <li>
-                    jijijn <MdKeyboardArrowRight />
-                  </li>
-                  <li>
-                    jjnkjnk <MdKeyboardArrowRight />
-                  </li>
-                  <li>
-                    jnjjkn <MdKeyboardArrowRight />
-                  </li>
-                </ul>
+                <Link
+                  to={`${item.id}/${item.mapMarker.latLong.latitude}/${item.mapMarker.latLong.longitude}`}
+                >
+                  <div className={styles.priceContainer}>
+                    <p className={styles.leadPrice}>
+                      {item.price.lead?.formatted} <br />
+                    </p>
+                    <p className={styles.discountPrice}>
+                      {item.price.lead?.formatted <
+                        item.price.displayMessages[0].lineItems[0].price
+                          .formatted &&
+                        item.price.displayMessages[0].lineItems[0].price
+                          .formatted}
+                    </p>
+                    <p className={styles.leadPrice}>Per night</p>
+                    <button className={styles.viewDealBtn}>View Deal</button>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

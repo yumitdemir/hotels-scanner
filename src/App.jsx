@@ -1,9 +1,10 @@
 import styles from "./styles.module.css";
 import { Routes, Route } from "react-router-dom";
-import HotelList from "./Pages/HotelList/HotelList";
 
+import HotelList from "./Pages/HotelList/HotelList";
 import Home from "./Pages/Home/Home";
 import Nav from "./Components/Nav/Nav";
+import HotelDetails from "./Pages/HotelDetails/HotelDetails";
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
           <Route
             path=":cityname/:id/:checkIn/:checkOut"
             element={<HotelList />}
+          />
+          <Route
+            path=":cityname/:id/:checkIn/:checkOut/:propertieId/:lat/:lon"
+            element={<HotelDetails />}
           />
         </Routes>
       </div>

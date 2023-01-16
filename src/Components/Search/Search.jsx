@@ -34,7 +34,7 @@ function Search({
             },
             headers: {
               "X-RapidAPI-Key":
-                "d550254368mshc31e544bf5340d6p12c15bjsn425b418039ce",
+                "9159b6f10dmsh11cd975195be1ccp1dff76jsn0b83aa1105eb",
               "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
             },
             signal: controller.signal,
@@ -43,7 +43,6 @@ function Search({
           axios
             .request(options)
             .then(function (response) {
-              console.log(response.data.sr);
               setLocationRecList(response.data.sr);
             })
             .catch(function (error) {});
@@ -52,9 +51,7 @@ function Search({
             controller.abort();
           };
         }
-      : () => {
-          console.log("dsa");
-        },
+      : () => {},
     [location]
   );
 
@@ -77,6 +74,7 @@ function Search({
           onChange={(e) => {
             setInDate(e.target.value);
           }}
+          min={new Date().toISOString().split("T")[0]}
         />
         <input
           type="date"
@@ -84,6 +82,7 @@ function Search({
           onChange={(e) => {
             setOutDate(e.target.value);
           }}
+          min={inDate}
         />
         {(apiStatus === false) & (inDate !== "") & (outDate !== "") ? (
           <Link to={`${location}/${locationId}/${inDate}/${outDate}`}>

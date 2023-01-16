@@ -51,10 +51,9 @@ function LeftMenu({ checkOut, checkIn, cityname }) {
     if (firstRender) searchApiCall();
     else setFirstRender(true);
   }, [location]);
-  console.log(locationId);
 
   return (
-    <div>
+    <div className={styles.leftMenuContainer}>
       <ul className={styles.leftMenuList}>
         <li>
           <input

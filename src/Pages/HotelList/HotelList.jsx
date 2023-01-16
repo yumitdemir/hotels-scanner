@@ -7,13 +7,14 @@ import styles from "./styles.module.css";
 function HotelList(props) {
   const { cityname, id, checkIn, checkOut } = useParams();
   const [hotelList, setHotelList] = useState([]);
-  console.log(hotelList);
-  function hotelSearch(regionId, checkInDate, checkOutDate) {
+  const [sortBy, setStoryBy] = useState("price");
+
+  function hotelSearch(regionId, checkInDate, checkOutDate, sortBy) {
     const options = {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "d550254368mshc31e544bf5340d6p12c15bjsn425b418039ce",
+        "X-RapidAPI-Key": "9159b6f10dmsh11cd975195be1ccp1dff76jsn0b83aa1105eb",
         "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
       },
       body: `{"currency":"USD","eapid":1,"locale":"en_US","siteId":300000001,"destination":{"regionId":"${regionId}"},"checkInDate":{"day":${Number(
@@ -24,7 +25,7 @@ function HotelList(props) {
         checkOutDate[1]
       )},"year":${Number(
         checkOutDate[0]
-      )}},"rooms":[{"adults":2,"children":[{"age":5},{"age":7}]}],"resultsStartingIndex":0,"resultsSize":200,"sort":"PRICE_LOW_TO_HIGH","filters":{"price":{"max":150,"min":100}}}`,
+      )}},"rooms":[{"adults":2,"children":[{"age":5},{"age":7}]}],"resultsStartingIndex":0,"resultsSize":200,"sort":"${sortBy}","filters":{"price":{"max":150,"min":100}}}`,
     };
 
     fetch("https://hotels4.p.rapidapi.com/properties/v2/list", options)
@@ -34,8 +35,8 @@ function HotelList(props) {
   }
 
   useEffect(() => {
-    hotelSearch(id, checkIn.split("-"), checkOut.split("-"));
-  }, []);
+    hotelSearch(id, checkIn.split("-"), checkOut.split("-"), sortBy);
+  }, [id, checkIn, checkOut, sortBy]);
   return (
     <div className={styles.HotelList}>
       {hotelList.length === 0 ? (
@@ -44,6 +45,7 @@ function HotelList(props) {
         </div>
       ) : (
         <HotelListItems
+          setStoryBy={setStoryBy}
           cityname={cityname}
           hotelList={hotelList}
           setHotelList={setHotelList}

@@ -12,7 +12,7 @@ function App() {
       <Nav className={styles.nav} />
       <div className={styles.content}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/hotels-scanner" element={<Home />} />
           <Route
             path=":cityname/:id/:checkIn/:checkOut"
             element={<HotelList />}

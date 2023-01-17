@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hotels-scanner/static/css/main.ee5eb5ea.css",
+    "main.js": "/hotels-scanner/static/js/main.403ea12f.js",
+    "index.html": "/hotels-scanner/index.html",
+    "main.ee5eb5ea.css.map": "/hotels-scanner/static/css/main.ee5eb5ea.css.map",
+    "main.403ea12f.js.map": "/hotels-scanner/static/js/main.403ea12f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee5eb5ea.css",
+    "static/js/main.403ea12f.js"
+  ]
+}

@@ -49,7 +49,7 @@ const Thumbnail = ({ arr, image, index }) => {
       {arr.map((imgsrc, i) => (
         <img
           key={i}
-          height="50"
+          height="50vw"
           src={imgsrc}
           onClick={() => image(i)}
           className={index === i ? styles.active : ""}

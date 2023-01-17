@@ -1,0 +1,65 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+
+  grid-column-gap: 25px;
+}
+
+.ulContainer {
+  display: flex;
+  gap: 4vw;
+}
+.ulContainer ul li {
+  margin-bottom: 15px;
+}
+.reviewsTitle {
+  font-family: "Roboto", sans-serif;
+}
+
+.mainScoreDiv {
+  display: flex;
+  gap: 5px;
+}
+.reviewCount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainScore {
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+}
+.reviewCount p {
+  color: #2c6ec1;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: left;
+}
+
+.score {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+}
+.seeAllReviews {
+  font-size: 15px;
+  box-shadow: none;
+  border: 2px solid gainsboro;
+  background-color: white;
+  padding: 8px;
+  color: #327dc8;
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 15px;
+}
+.seeAllReviews:hover {
+  color: #1b61a7;
+  background-color: rgba(175, 175, 175, 0.479);
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-column-gap: 25px;
+  }
+}

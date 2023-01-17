@@ -37,7 +37,12 @@ function AutoItemLoder({ hotelList }) {
                 <CiBadgeDollar /> Collect stamps{" "}
               </p>
               <p>
-                <CiLocationOn /> {item.destinationInfo.distanceFromMessaging}
+                {item.destinationInfo.distanceFromMessaging !== null && (
+                  <>
+                    <CiLocationOn />{" "}
+                    {item.destinationInfo.distanceFromMessaging}
+                  </>
+                )}
               </p>
             </div>
             <div className={styles.hotelImg}>

@@ -138,11 +138,16 @@ p {
 .headerTitleStar p {
   padding: 5px;
   border-radius: 5px;
-  background-color: #669900;
+
   color: white;
   text-align: end;
   font-size: 1.2vw;
   white-space: nowrap;
+}
+
+.userScore {
+  height: 100%;
+  background-color: #669900;
 }
 .leadPrice:first-of-type {
   color: #ffcd1e;
@@ -195,4 +200,33 @@ p {
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+@media only screen and (max-width: 710px) {
+  .headerTitleStar h1 {
+    font-size: 5vw;
+  }
+  .discountPrice {
+    font-size: 3vw;
+  }
+  .leadPrice:first-of-type {
+    font-size: 4.8vw;
+  }
+  .leadPrice:last-of-type {
+    font-size: 4vw;
+  }
+
+  .hotelItem:hover .cardHeader div .headerTitleStar p {
+    font-size: 3vw;
+  }
+
+  .hotelItem:hover .cardHeader div .headerTitleStar h1 {
+    font-size: 5vw;
+  }
+  .hotelItem .cardHeader div .headerTitleStar p {
+    font-size: 2.5vw;
+  }
+  .viewDealBtn {
+    font-size: 2.5vw;
+  }
 }

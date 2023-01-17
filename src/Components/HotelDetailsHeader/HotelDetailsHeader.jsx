@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import { AiFillStar, AiOutlineArrowDown } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { useParams } from "react-router-dom";
+import { MdRateReview } from "react-icons/md";
 
 function HotelDetailsHeader({ propertieDetails }) {
   const { cityname } = useParams();
@@ -53,12 +54,12 @@ function HotelDetailsHeader({ propertieDetails }) {
   return (
     <div className={styles.header}>
       <div className={styles.nameAndStar}>
-        <h1>{propertieDetails.summary.name}</h1>
+        <h1>{propertieDetails.summary.name} </h1>
         <div>
           {starRating(propertieDetails.summary.overview.propertyRating.rating)}
         </div>
       </div>
-      <div>
+      <div className={styles.locationAndScore}>
         <p>
           <CiLocationOn /> {cityname} ,{" "}
           {
@@ -66,6 +67,16 @@ function HotelDetailsHeader({ propertieDetails }) {
               Show On Map <AiOutlineArrowDown />
             </a>
           }
+        </p>
+        <p>
+          <MdRateReview />
+          {"  "} Scored{" "}
+          {
+            propertieDetails.reviewInfo?.summary.overallScoreWithDescriptionA11y
+              ?.value
+          }{" "}
+          from{" "}
+          {propertieDetails.reviewInfo?.summary?.highlightMessage.subtitle.text}{" "}
         </p>
       </div>
     </div>

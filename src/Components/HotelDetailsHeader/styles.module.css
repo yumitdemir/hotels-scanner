@@ -1,7 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@500&family=Source+Sans+Pro&display=swap");
+
 .nameAndStar {
   display: flex;
   align-items: center;
 }
 .header {
   margin-bottom: 20px;
+}
+
+.nameAndStar h1 {
+  font-family: "Roboto", sans-serif;
+}
+.locationAndScore p {
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: left;
 }

@@ -1,0 +1,17 @@
+.reviewItem {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1.5px solid gainsboro;
+}
+.score {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+.date {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(126, 126, 126);
+}
+.text {
+  font-family: "Source Sans Pro", sans-serif;
+}

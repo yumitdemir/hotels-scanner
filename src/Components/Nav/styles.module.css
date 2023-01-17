@@ -10,22 +10,30 @@
   color: white;
   font-weight: 800;
   background-color: #5c8f10;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .hotelOption {
   margin: -1px;
   border-bottom: 2px solid orange;
 }
 
-.navOptionList {
+.github {
   display: flex;
   gap: 15px;
-  list-style: none;
-  text-decoration: none;
   color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
-.navOptionList li:hover {
+.github:hover {
   margin: -1px;
   border-bottom: 2px solid orange;
+  cursor: pointer;
+}
+.logo {
+  font-weight: 900;
+  font-size: 25px;
+  font-family: "Merriweather", serif;
   cursor: pointer;
 }

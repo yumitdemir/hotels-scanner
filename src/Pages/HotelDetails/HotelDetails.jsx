@@ -19,7 +19,7 @@ function HotelDetails() {
       imgaeeList = [...imgaeeList, item.image.url];
     });
 
-    setImageList(imgaeeList.slice(0, 50));
+    setImageList(imgaeeList.slice(0, 20));
   };
 
   const ApiCall = () => {
@@ -51,28 +51,24 @@ function HotelDetails() {
   useEffect(() => {
     createImgList();
   }, [propertieDetails]);
+
   return (
     <div>
       {propertieDetails ? (
         <div className={styles.hotelDetailsContainer}>
           <HotelDetailsHeader propertieDetails={propertieDetails} />
+
           <PhotoSlide imgss={imgaeList} />
-          <HotelDetailsSummary propertieDetails={propertieDetails} />
+
+          <HotelDetailsSummary
+            lat={lat}
+            lon={lon}
+            propertieDetails={propertieDetails}
+          />
         </div>
       ) : (
         <p>Loading</p>
       )}
-
-      <iframe
-        src={`https://maps.google.com/maps?q=${lat}, ${lon}&z=15&output=embed`}
-        width="600"
-        height="450"
-        frameBorder="0"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        aria-hidden="false"
-        tabIndex="0"
-      />
     </div>
   );
 }

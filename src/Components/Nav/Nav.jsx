@@ -1,18 +1,21 @@
 import React from "react";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
+import { AiFillGithub } from "react-icons/ai";
 
 const Nav = () => {
   return (
     <div className={styles.nav}>
-      <p className={styles.logo}>Hotel Scanner</p>
-      <div className={styles.navOptionListContainer}>
-        <ul className={styles.navOptionList}>
-          <li className={styles.hotelOption}>Hotels</li>
-          <li>Rent a Car</li>
-          <li>Flights</li>
-        </ul>
-      </div>
-      <p>About Us</p>
+      <Link to={".."}>
+        <p className={styles.logo}>Hotel Scanner</p>
+      </Link>
+      <div className={styles.navOptionListContainer}></div>
+      <p>
+        <a className={styles.github} href="https://github.com/yumitdemir">
+          <AiFillGithub />
+          yumitdemir
+        </a>
+      </p>
     </div>
   );
 };

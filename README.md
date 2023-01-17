@@ -11,7 +11,7 @@ I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/b
 ![3333mob](https://user-images.githubusercontent.com/108368506/212937544-e7e7dd83-3f1b-4c1a-b331-045f651410ec.PNG)
 ![333333mob](https://user-images.githubusercontent.com/108368506/212937563-eb78897b-5572-4d33-afca-cee4ee145491.PNG)
 ![33333333mob](https://user-images.githubusercontent.com/108368506/212937565-2fad69c0-df55-4e12-b180-9d0531e2f486.PNG)
-![Capture](https://user-images.githubusercontent.com/108368506/212937571-2717da26-4bb4-4667-9616-a5c20faeb3a6.PNG)
+
 ![1](https://user-images.githubusercontent.com/108368506/212937579-ec1fe30c-3d88-4394-9b65-cd3eca50a0ba.PNG)
 ![2](https://user-images.githubusercontent.com/108368506/212937583-45b773aa-c6e4-41b3-84d8-4c70472d7de2.PNG)
 ![22](https://user-images.githubusercontent.com/108368506/212937610-95e5a736-f951-4654-bbab-22ffb828006e.PNG)

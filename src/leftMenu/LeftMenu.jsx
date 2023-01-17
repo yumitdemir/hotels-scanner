@@ -14,7 +14,6 @@ function LeftMenu({ checkOut, checkIn, cityname }) {
   const [location, setLocation] = useState(cityname);
   const [locationId, setLocationId] = useState(id);
   const [locationRecList, setLocationRecList] = useState([]);
-  const [apiStatus, setApiStatus] = useState(false);
 
   function searchApiCall() {
     const controller = new AbortController();
@@ -47,10 +46,9 @@ function LeftMenu({ checkOut, checkIn, cityname }) {
   }
   const [firstRender, setFirstRender] = useState(false);
 
-  useEffect(() => {
-    if (firstRender) searchApiCall();
-    else setFirstRender(true);
-  }, [location]);
+  // useEffect(() => {
+  //   searchApiCall();
+  // }, [location]);
 
   return (
     <div className={styles.leftMenuContainer}>
@@ -60,16 +58,19 @@ function LeftMenu({ checkOut, checkIn, cityname }) {
             type="text"
             value={location}
             onChange={(e) => {
+              searchApiCall(e.target.value);
               setLocation(e.target.value);
             }}
           />
           <div className={styles.citysuggestion}>
-            {locationRecList.map((item) => {
+            {locationRecList?.slice(0, 4).map((item) => {
               return (
                 <p
                   onClick={() => {
                     setLocationId(item.gaiaId);
+                    console.log(item.regionNames.primaryDisplayName);
                     setLocation(item.regionNames.primaryDisplayName);
+                    setLocationRecList([]);
                   }}
                   key={shortid.generate()}
                 >
@@ -101,7 +102,7 @@ function LeftMenu({ checkOut, checkIn, cityname }) {
 
         <li>
           <Link
-            to={`../${location}/${locationId}/${checkInNew}/${checkOutNew}`}
+            to={`../hotels-scanner/${location}/${locationId}/${checkInNew}/${checkOutNew}`}
           >
             <button>Search</button>
           </Link>

@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <div className={styles.nav}>
       <Link to={".."}>
-        <p className={styles.logo}>Hotel Scanner</p>
+        <p className={styles.logo}>Hotels Scanner</p>
       </Link>
       <div className={styles.navOptionListContainer}></div>
       <p>

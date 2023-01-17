@@ -64,7 +64,7 @@ function LeftMenu({ checkOut, checkIn, cityname }) {
             }}
           />
           <div className={styles.citysuggestion}>
-            {locationRecList.splice(0, 4).map((item) => {
+            {locationRecList.map((item) => {
               return (
                 <p
                   onClick={() => {

@@ -7,6 +7,7 @@ An giveaway tracker website, built with vanilla javascript and CSS/Bootstrap. Dy
 
 ## Performance
 I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.
+![light](https://user-images.githubusercontent.com/108368506/212940832-16bd82d5-e601-4e36-a16f-b430024ae0ad.PNG)
 
 ![1](https://user-images.githubusercontent.com/108368506/212937579-ec1fe30c-3d88-4394-9b65-cd3eca50a0ba.PNG)
 

@@ -2,8 +2,7 @@
 🔴 Live Demo https://yumitdemir.github.io/hotels-scanner/
 
 ## Short Description
-An giveaway tracker website, built with vanilla javascript and CSS/Bootstrap. Dynamicly loades api data and creates cards for every giveaway.Includes a filtiring future. Responsive for mediume devices but for now need some little changes for some small devices.
-An giveaway tracker website, built with vanilla javascript and CSS/Bootstrap. Dynamicly loades api data and create cards for every giveaway.Includes a filtiring future. Responsive for mediume devices but for now need some little changes for some small devices.
+Hotels Scanner is a responsive website built using React that allows users to search for hotels in a specific city using check-in and checkout dates. The site displays a list of properties in that location and utilizes dynamic React routes. It utilizes a free version of an API, which has limitations on the number of requests and features available.
 
 ## Performance
 I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.

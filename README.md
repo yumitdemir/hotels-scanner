@@ -9,7 +9,6 @@ An giveaway tracker website, built with vanilla javascript and CSS/Bootstrap. Dy
 I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.
 
 ![3333mob](https://user-images.githubusercontent.com/108368506/212937544-e7e7dd83-3f1b-4c1a-b331-045f651410ec.PNG)
-<pre>
 ![333333mob](https://user-images.githubusercontent.com/108368506/212937563-eb78897b-5572-4d33-afca-cee4ee145491.PNG)
 ![33333333mob](https://user-images.githubusercontent.com/108368506/212937565-2fad69c0-df55-4e12-b180-9d0531e2f486.PNG)
 ![Capture](https://user-images.githubusercontent.com/108368506/212937571-2717da26-4bb4-4667-9616-a5c20faeb3a6.PNG)
@@ -21,4 +20,5 @@ I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/b
 ![3](https://user-images.githubusercontent.com/108368506/212937665-019636c6-605f-4fbc-8580-eed15dbec267.PNG)
 ![3333](https://user-images.githubusercontent.com/108368506/212937708-7a342eea-2e72-4c5e-b6f8-de88cfe6080d.PNG)
 ![3333333](https://user-images.githubusercontent.com/108368506/212937720-adeac179-bf8e-43a7-8765-ab5b0e8d1310.PNG)
+
 

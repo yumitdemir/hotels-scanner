@@ -14,11 +14,11 @@ function App() {
         <Routes>
           <Route path="/hotels-scanner" element={<Home />} />
           <Route
-            path=":cityname/:id/:checkIn/:checkOut"
+            path="hotels-scanner/:cityname/:id/:checkIn/:checkOut"
             element={<HotelList />}
           />
           <Route
-            path=":cityname/:id/:checkIn/:checkOut/:propertieId/:lat/:lon"
+            path="hotels-scanner/:cityname/:id/:checkIn/:checkOut/:propertieId/:lat/:lon"
             element={<HotelDetails />}
           />
         </Routes>

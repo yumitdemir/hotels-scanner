@@ -28,7 +28,7 @@ function LeftMenu({ checkOut, checkIn, cityname }) {
         siteid: "300000001",
       },
       headers: {
-        "X-RapidAPI-Key": "d550254368mshc31e544bf5340d6p12c15bjsn425b418039ce",
+        "X-RapidAPI-Key": "bc8ba8e140msh5cfd09020077e6ep1f78c4jsn2f4a18423faa",
         "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
       },
       signal: controller.signal,

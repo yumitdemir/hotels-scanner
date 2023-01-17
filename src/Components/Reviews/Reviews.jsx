@@ -15,7 +15,7 @@ function Reviews({ propertieDetails }) {
       url: "https://hotels4.p.rapidapi.com/reviews/v3/list",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "9159b6f10dmsh11cd975195be1ccp1dff76jsn0b83aa1105eb",
+        "X-RapidAPI-Key": "bc8ba8e140msh5cfd09020077e6ep1f78c4jsn2f4a18423faa",
         "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
       },
       data: '{"currency":"USD","eapid":1,"locale":"en_US","siteId":300000001,"propertyId":"9209612","size":10,"startingIndex":0}',

@@ -34,7 +34,7 @@ function Search({
             },
             headers: {
               "X-RapidAPI-Key":
-                "9159b6f10dmsh11cd975195be1ccp1dff76jsn0b83aa1105eb",
+                "bc8ba8e140msh5cfd09020077e6ep1f78c4jsn2f4a18423faa",
               "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
             },
             signal: controller.signal,

@@ -1,70 +1,30 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🔴 Live Demo https://yumitdemir.github.io/hotels-scanner/
 
-## Available Scripts
+## Short Description
+Hotels Scanner is a responsive website built using React that allows users to search for hotels in a specific city using check-in and checkout dates. The site displays a list of properties in that location and utilizes dynamic React routes. It utilizes a free version of an API, which has limitations on the number of requests and features available.
 
-In the project directory, you can run:
+## Performance
+I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.
+![light](https://user-images.githubusercontent.com/108368506/212940832-16bd82d5-e601-4e36-a16f-b430024ae0ad.PNG)
 
-### `npm start`
+## Screenshots of The Website
+![1](https://user-images.githubusercontent.com/108368506/212937579-ec1fe30c-3d88-4394-9b65-cd3eca50a0ba.PNG)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![2](https://user-images.githubusercontent.com/108368506/212937583-45b773aa-c6e4-41b3-84d8-4c70472d7de2.PNG)
+![22](https://user-images.githubusercontent.com/108368506/212937610-95e5a736-f951-4654-bbab-22ffb828006e.PNG)
+![222 phone](https://user-images.githubusercontent.com/108368506/212937647-acd15f22-b82d-490d-98bd-38797cb0a8a5.PNG)
+![2222 tablet](https://user-images.githubusercontent.com/108368506/212937656-51c35836-3403-4eb0-b7d0-dbfe163c84d7.PNG)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![3](https://user-images.githubusercontent.com/108368506/212937665-019636c6-605f-4fbc-8580-eed15dbec267.PNG)
+![3333](https://user-images.githubusercontent.com/108368506/212937708-7a342eea-2e72-4c5e-b6f8-de88cfe6080d.PNG)
+![3333333](https://user-images.githubusercontent.com/108368506/212937720-adeac179-bf8e-43a7-8765-ab5b0e8d1310.PNG)
+![3333mob](https://user-images.githubusercontent.com/108368506/212937544-e7e7dd83-3f1b-4c1a-b331-045f651410ec.PNG)
+![333333mob](https://user-images.githubusercontent.com/108368506/212937563-eb78897b-5572-4d33-afca-cee4ee145491.PNG)
+![33333333mob](https://user-images.githubusercontent.com/108368506/212937565-2fad69c0-df55-4e12-b180-9d0531e2f486.PNG)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
